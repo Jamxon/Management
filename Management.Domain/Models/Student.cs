@@ -1,12 +1,11 @@
 using System;
 
-namespace Management.Domain.Models;
-
-public class Student
+namespace Management.Domain.Models
 {
-    public string Id {get; set;}
-
-    public string FirstName {get; set;}
-
-    public string LastName {get; set;}
+    public class Student
+    {
+        public string? Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+    }
 }

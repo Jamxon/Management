@@ -11,20 +11,17 @@ namespace Management.Infrastructure.Data
     {
         public DbContext()
         {
-            Students = new Student[12];
+            Students = new Student[] { new Student() };
         }
 
         public Student[] Students { get; set; }
-
-        public int StudentCount { get; private set; } = 0;
+        public int StudentCount { get; set; } = 0;
 
         public void AddStudent(Student student)
         {
-            if (StudentCount >= Students.Length)
-                throw new Exception("Students array is full!");
-
-            Students[StudentCount] = student;
-            StudentCount++;
+            List<Student> students = Students.ToList();
+            students.Add(student);
+            Students = students.ToArray();
         }
     }
 }
