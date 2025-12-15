@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/jamkhan/Desktop/Managment/Management.Domain/Management.Domain.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Management\\Management.Domain\\Management.Domain.csproj": {}
   },
   "projects": {
-    "/home/jamkhan/Desktop/Managment/Management.Domain/Management.Domain.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Management\\Management.Domain\\Management.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jamkhan/Desktop/Managment/Management.Domain/Management.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Management\\Management.Domain\\Management.Domain.csproj",
         "projectName": "Management.Domain",
-        "projectPath": "/home/jamkhan/Desktop/Managment/Management.Domain/Management.Domain.csproj",
-        "packagesPath": "/home/jamkhan/.nuget/packages/",
-        "outputPath": "/home/jamkhan/Desktop/Managment/Management.Domain/obj/",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Management\\Management.Domain\\Management.Domain.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Management\\Management.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/jamkhan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -53,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
