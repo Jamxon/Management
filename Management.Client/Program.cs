@@ -12,10 +12,10 @@ namespace Management.Client
             studentService.AddStudent("Jamshidbek", "Aliyev");
             studentService.AddStudent("Jamshidbek", "Aliyev");
 
-            foreach (var student in studentService.DbContext.Students)
+            foreach (var student in studentService.GetStudents())
             {
                 Console.WriteLine(
-                    $"ID: {student.Id}, Name: {student.FirstName} {student.LastName}"
+                    $"ID: {student.Id}, Fullname: {student.FirstName} {student.LastName}"
                 );
             }
         }

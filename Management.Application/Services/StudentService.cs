@@ -23,5 +23,10 @@ namespace Management.Application.Services
             };
             this.DbContext.AddStudent(newStudent);
         }
+
+        public Student[] GetStudents()
+        {
+            return this.DbContext.Students.ToArray();
+        }
     }
 }
