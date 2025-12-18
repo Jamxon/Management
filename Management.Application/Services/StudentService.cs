@@ -28,5 +28,10 @@ namespace Management.Application.Services
         {
             return this.DbContext.Students.ToArray();
         }
+
+        public int GetStudentCount()
+        {
+            return this.DbContext.Students.Length;
+        }
     }
 }
