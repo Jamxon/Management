@@ -1,61 +1,128 @@
-📚 Maktab Boshqaruv Tizimi (School Management System)
-Ushbu loyiha C# dasturlash tilida yaratilgan bo'lib, o'qituvchilarni ro'yxatga olish, tizimga kirish va talabalar ma'lumotlarini boshqarish uchun mo'ljallangan konsol ilovadir.
+# 🎓 Student Management System
 
-✨ Xususiyatlari
-O'qituvchilar Registratsiyasi: Yangi o'qituvchi profillarini yaratish.
+O'quvchilar va o'qituvchilarni boshqarish uchun oddiy console dasturi.
 
-Xavfsiz Kirish: Username va parol orqali tizimga kirish himoyasi.
+## 📋 Loyiha Haqida
 
-Talabalar Boshqaruvi:
+Bu loyiha C# tilida yozilgan va Clean Architecture prinsiplaridan foydalangan holda yaratilgan. Tizim o'qituvchilarning tizimga kirishini ta'minlaydi va ular o'quvchilarni boshqarishlari mumkin.
 
-Yangi talabalarni bazaga qo'shish.
+## 🏗️ Arxitektura
 
-Mavjud talabalar ro'yxatini jadval ko'rinishida ko'rish.
+Loyiha quyidagi qatlamlardan iborat:
 
-Qabul kvotasi va bo'sh o'rinlar sonini kuzatish.
+- **Management.Domain** - Domain modellari (Student, Teacher)
+- **Management.Infrastructure** - Ma'lumotlar bazasi konteksti
+- **Management.Application** - Biznes logika servislari
+- **Management.Client** - Console UI
 
-Chiroyli Interfeys: Konsol ranglari va maxsus ramkalar bilan boyitilgan foydalanuvchi interfeysi.
+## ✨ Xususiyatlar
 
-🛠 Texnologiyalar
-Til: C# (.NET Core / .NET SDK)
+### O'qituvchi funksiyalari:
+- ✅ Tizimga kirish (Login)
+- ✅ Yangi o'quvchi qo'shish
+- ✅ Barcha o'quvchilarni ko'rish
+- ✅ O'quvchilar sonini ko'rish
 
-Arxitektura: N-Tier (Domain, Infrastructure, Application, Client)
+## 🚀 O'rnatish va Ishga Tushirish
 
-Ma'lumotlar saqlash: In-Memory (Vaqtinchalik xotira)
+### Talablar:
+- .NET 6.0 yoki undan yuqori versiya
+- Visual Studio 2022 yoki VS Code
 
-📂 Loyiha Tuzilishi
-Plaintext
+### Ishga tushirish:
+```bash
+cd Management.Client
+dotnet run
+```
 
-Management.System/
-├── Management.Domain          # Modellarni o'z ichiga oladi (Student, Teacher)
-├── Management.Infrastructure  # Ma'lumotlar bazasi simulyatsiyasi (DbContext)
-├── Management.Application     # Biznes mantiq va servislar (StudentService, TeacherService)
-└── Management.Client          # Konsol interfeysi (Asosiy dastur)
-🚀 Ishga tushirish
-Repozitoriyani yuklab oling yoki kodingizni IDE (Visual Studio / JetBrains Rider) da oching.
+## 🔐 Kirish Ma'lumotlari
 
-Management.Client loyihasini "Startup Project" qilib belgilang.
+**Default o'qituvchi:**
+- Username: `admin`
+- Password: `admin`
 
-Dasturni ishga tushirish uchun F5 tugmasini bosing.
+## 📖 Foydalanish
 
-📖 Foydalanish yo'riqnomasi
-Dastlabki kirish: Tizimda standart holatda admin / admin login paroli mavjud.
+1. Dasturni ishga tushiring
+2. Username va parolni kiriting
+3. Menyudan kerakli amalni tanlang:
+   - `1` - Yangi o'quvchi qo'shish
+   - `2` - Barcha o'quvchilarni ko'rish
+   - `3` - O'quvchilar sonini ko'rish
 
-Ro'yxatdan o'tish: Agar yangi o'qituvchi bo'lsangiz, asosiy menyudan 2 ni tanlang.
+## 📁 Loyiha Strukturasi
 
-Talaba qo'shish: Tizimga kirgandan so'ng "Yangi talaba qo'shish" bo'limiga o'ting va ma'lumotlarni kiriting.
+```
+Management/
+├── Management.Domain/
+│   └── Models/
+│       ├── Student.cs
+│       └── Teacher.cs
+├── Management.Infrastructure/
+│   └── Data/
+│       └── DbContext.cs
+├── Management.Application/
+│   └── Services/
+│       ├── StudentService.cs
+│       └── TeacherService.cs
+└── Management.Client/
+    └── Program.cs
+```
 
-Monitoring: "Bo'sh o'rinlar" bo'limi orqali jami 12 ta o'rindan nechtasi qolganini ko'rishingiz mumkin.
+## 🔧 Texnologiyalar
 
-🎨 Interfeys ko'rinishi
-Dasturda foydalanuvchiga qulaylik yaratish uchun quyidagi ranglardan foydalanilgan:
+- **Language**: C# 10
+- **Framework**: .NET 6.0+
+- **Architecture**: Clean Architecture
+- **Data Storage**: In-Memory Array
 
-🟡 Sariq: Sarlavhalar va muhim bo'limlar.
+## 📝 Qo'shimcha Ma'lumotlar
 
-🟢 Yashil: Muvaffaqiyatli amallar (Saqlash, Kirish).
+### O'quvchi Modeli
+```csharp
+public class Student
+{
+    public string? Id { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+}
+```
 
-🔴 Qizil: Xatoliklar yoki to'lgan kvotalar.
+### O'qituvchi Modeli
+```csharp
+public class Teacher
+{
+    public string Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Username { get; set; }
+    public string Password { get; set; }
+}
+```
 
-🔵 Havorang: Asosiy menyu tanlovlari.
+## ⚠️ Eslatmalar
 
-Eslatma: Ma'lumotlar dastur yopilganda o'chib ketadi (In-Memory). Kelajakda ma'lumotlarni JSON yoki SQL bazaga saqlash imkoniyati mavjud.
+- Tizim hozircha in-memory ma'lumotlar bilan ishlaydi
+- Dastur har safar ishga tushganda ma'lumotlar qayta tiklanadi
+- Maksimal 3 marta noto'g'ri login urinishi imkoniyati mavjud
+
+## 🔮 Kelajakdagi Rejalar
+
+- [ ] O'qituvchi registratsiya funksiyasi
+- [ ] O'quvchilarni o'chirish va tahrirlash
+- [ ] Database integratsiyasi (SQL Server)
+- [ ] Parollarni shifrlash
+- [ ] Logging tizimi
+- [ ] User roles va permissions
+
+## 👨‍💻 Muallif
+
+Student Management System - Talim muassasalari uchun oddiy boshqaruv tizimi.
+
+## 📄 Litsenziya
+
+Bu loyiha o'quv maqsadlarida yaratilgan.
+
+---
+
+**Savollar yoki takliflar uchun:** Issue ochishingiz mumkin!
