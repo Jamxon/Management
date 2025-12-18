@@ -72,7 +72,7 @@ Management/
 ## 🔧 Texnologiyalar
 
 - **Language**: C# 10
-- **Framework**: .NET 6.0+
+- **Framework**: .NET 8.0
 - **Architecture**: Clean Architecture
 - **Data Storage**: In-Memory Array
 
