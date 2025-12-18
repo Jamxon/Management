@@ -17,7 +17,6 @@ Loyiha quyidagi qatlamlardan iborat:
 
 ## ✨ Xususiyatlar
 
-
 ### O'qituvchi funksiyalari:
 - ✅ Tizimga kirish (Login)
 - ✅ Yangi o'quvchi qo'shish
