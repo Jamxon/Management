@@ -31,5 +31,11 @@ namespace Management.Application.Services
 
             _index++;
         }
+
+        public Student[] GetStudents()
+        {
+            var students = this.dbcontext.Students;
+            return students;
+        }
     }
 }
